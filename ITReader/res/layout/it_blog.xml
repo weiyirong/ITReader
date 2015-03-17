@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ListView布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 头布局 -->
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/it_category_title_bg"
+        android:orientation="horizontal"
+        android:padding="0dp" >
+
+        <ProgressBar
+            android:id="@+id/toolbar_progress"
+            android:layout_width="50dip"
+            android:layout_height="40dip"
+            android:indeterminateDrawable="@drawable/progressbar_style_title"
+            android:paddingLeft="5dp" />
+
+        <ImageView
+            android:id="@+id/toolbar_back"
+            android:layout_width="50dip"
+            android:layout_height="40dip"
+            android:background="@drawable/toolbar_back"
+            android:paddingLeft="5dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/it_category_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="86dip"
+            android:layout_marginTop="5dip"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!-- 底部布局 -->
+
+    <LinearLayout
+        android:id="@+id/footer_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer_main_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <cn.domob.android.ads.DomobAdView
+                android:id="@+id/domobAd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/footer_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/main"
+                android:textColor="#808080"
+                android:textScaleX="2.0"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/footer_it_business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/it_business"
+                android:textColor="#808080"
+                android:textScaleX="2.0"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/footer_it_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/it_info"
+                android:textColor="#808080"
+                android:textScaleX="2.0"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/footer_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/help"
+                android:textColor="#808080"
+                android:textScaleX="2.0"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer_menu"
+        android:layout_below="@id/header_layout"
+        android:background="@drawable/it_bg" >
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/it_bg"
+            android:cacheColorHint="#00000000"
+            android:clickable="true"
+            android:divider="#FFC0CB"
+            android:dividerHeight="1.5dip"
+            android:scrollbarSize="1.0dip" />
+    </LinearLayout>
+
+</RelativeLayout>
